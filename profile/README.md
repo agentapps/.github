@@ -26,8 +26,8 @@ npm install -g @agentapps/cli
 ```
 
 ```bash
-agentapps install app.github github-work    # an app, under a name you choose
-agentapps github-work auth                   # your account, kept on your machine
+agentapps install app.linear linear          # an app, under a name you choose
+agentapps config linear API_KEY:"lin_api_…"  # its credentials stay on your machine
 agentapps station start                      # runs your apps
 agentapps connect claude-code                # or: agentapps connect cursor
 ```
@@ -37,13 +37,13 @@ agentapps connect claude-code                # or: agentapps connect cursor
 Every connected agent has its own key and its own policy. A rule allows a tool, denies it, or makes the call wait for your approval:
 
 ```bash
-agentapps policy set cursor app.github merge-pull ask
-agentapps policy set claude-code app.github git-push deny
+agentapps policy set cursor app.linear linear-create-issue ask
+agentapps policy set cursor app.linear linear-delete-issue deny
 ```
 
 ### A catalog of apps
 
-GitHub, Notion, Slack, Gmail, Google Calendar and Drive, Linear, Jira, Stripe, HubSpot, Figma, Sentry, Vercel, Supabase and many more. `agentapps apps` lists them, and each one installs with a single command. The whole catalog is at [agentapps.tech/catalogue](https://agentapps.tech/en/catalogue).
+GitHub, Notion, Slack, Gmail, Google Calendar and Drive, Linear, Jira, Stripe, HubSpot, Figma, Sentry, Vercel, Supabase and many more. `agentapps apps` lists them. Some work right away, most take an API key, and the ones that sign in with OAuth need an OAuth client you register with the service. The whole catalog is at [agentapps.tech/catalogue](https://agentapps.tech/en/catalogue).
 
 ### Write your own
 
