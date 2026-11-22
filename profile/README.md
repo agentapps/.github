@@ -37,8 +37,8 @@ agentapps connect claude-code                # or: agentapps connect cursor
 Every connected agent has its own key and its own policy. A rule allows a tool, denies it, or makes the call wait for your approval:
 
 ```bash
-agentapps policy set cursor app.linear linear-create-issue ask
-agentapps policy set cursor app.linear linear-delete-issue deny
+agentapps policy set cursor app.linear create-issue ask
+agentapps policy set cursor app.linear delete-issue deny
 ```
 
 ### A catalog of apps
